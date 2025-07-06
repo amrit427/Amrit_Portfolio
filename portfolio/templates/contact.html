@@ -1,0 +1,281 @@
+{% extends "base.html" %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<section class="contact-hero">
+    <div class="container">
+        <h1>Get In Touch</h1>
+        <p class="contact-intro">
+            I'm always excited to connect with fellow developers, discuss new opportunities, 
+            and collaborate on interesting projects. Let's start a conversation!
+        </p>
+        <div class="availability-status">
+            <div class="status-indicator"></div>
+            <span>Available for new projects</span>
+        </div>
+    </div>
+</section>
+
+<section class="contact-content">
+    <div class="container">
+        <div class="contact-grid">
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h2>Let's Connect</h2>
+                <p>Whether you have a project idea, want to discuss technology, or just want to chat about coding, feel free to reach out through any of these channels.</p>
+                
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <a href="mailto:amritkumarpatro@gmail.com" class="contact-link">amritkumarpatro@gmail.com</a>
+                            <p>Usually respond within 24 hours</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <a href="tel:+91XXXXXXXXXX" class="contact-link">+91 9777022202</a>
+                            <p>Available for calls by appointment</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <span class="contact-link">Berhampur, Odisha, India</span>
+                            <p>Available for remote work worldwide</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>LinkedIn</h3>
+                            <a href="https://www.linkedin.com/in/amrit-kumar-patro-32b22b373?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="contact-link">Connect with me</a>
+                            <p>Professional networking</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>GitHub</h3>
+                            <a href="https://github.com/amrit427" target="_blank" class="contact-link">View my repositories</a>
+                            <p>Check out my latest projects</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+           
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h3>What technologies do you work with?</h3>
+                <p>I specialize in Python (Flask), JavaScript, HTML/CSS, and modern web technologies. I also work with databases like PostgreSQL and MongoDB, and have experience with cloud services like AWS.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Are you available for freelance work?</h3>
+                <p>Yes! I'm currently available for freelance projects. I work with startups, small businesses, and individuals to create custom web solutions.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Do you work with remote teams?</h3>
+                <p>Absolutely! I have experience working with remote teams across different time zones. I use modern collaboration tools and maintain clear communication throughout projects.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>What's your typical project timeline?</h3>
+                <p>Project timelines vary depending on complexity, but typical projects range from 2-8 weeks. I provide detailed project timelines during the initial consultation.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Do you provide ongoing support?</h3>
+                <p>Yes, I offer ongoing maintenance and support packages to ensure your application stays updated, secure, and performs optimally.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>How do you handle project payments?</h3>
+                <p>I typically work with milestone-based payments. We'll discuss the payment structure during our initial consultation based on your project needs.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact CTA -->
+<section class="contact-cta">
+    <div class="container">
+        <h2>Ready to Start Your Project?</h2>
+        <p>Let's turn your ideas into reality. I'm here to help you build something amazing.</p>
+       
+    </div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    
+    
+    // FAQ toggle functionality
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('h3');
+        const answer = item.querySelector('p');
+        
+        question.addEventListener('click', () => {
+            item.classList.toggle('active');
+            
+            if (item.classList.contains('active')) {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            } else {
+                answer.style.maxHeight = '0';
+            }
+        });
+    });
+    
+    // Add smooth scrolling for contact method clicks
+    const contactMethods = document.querySelectorAll('.contact-method');
+    contactMethods.forEach(method => {
+        method.addEventListener('click', function() {
+            const link = this.querySelector('a');
+            if (link && link.href.startsWith('mailto:')) {
+                // For email links, just follow the link
+                window.location.href = link.href;
+            } else if (link && link.href.startsWith('tel:')) {
+                // For phone links, just follow the link
+                window.location.href = link.href;
+            }
+        });
+    });
+});
+</script>
+
+<style>
+/* Additional styles for FAQ section */
+.faq-section {
+    padding: 60px 0;
+    background: var(--card-bg);
+    border-radius: 20px;
+    margin: 40px 0;
+}
+
+.faq-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.faq-item {
+    background: var(--dark-bg);
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.faq-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.faq-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    position: relative;
+    padding-right: 30px;
+}
+
+.faq-item h3::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active h3::after {
+    transform: rotate(45deg);
+}
+
+.faq-item p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-item.active p {
+    max-height: 200px;
+}
+
+/* Contact form enhancements */
+.contact-details p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-top: 5px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.form-actions .btn {
+    flex: 1;
+}
+
+/* Mobile responsiveness for contact grid */
+@media (max-width: 768px) {
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .form-actions .btn {
+        width: 100%;
+    }
+}
+</style>
+{% endblock %}

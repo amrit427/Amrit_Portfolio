@@ -1,0 +1,254 @@
+{% extends "base.html" %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+<section class="projects-hero">
+    <div class="container">
+        <h1>My Projects</h1>
+        <p class="projects-intro">
+            Here's a collection of projects I've worked on, showcasing my skills in 
+            full-stack development, UI/UX design, and problem-solving.
+        </p>
+    </div>
+</section>
+
+<section class="projects-filter">
+    <div class="container">
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="web">Web Apps</button>
+            <button class="filter-btn" data-filter="frontend">Frontend</button>
+            <button class="filter-btn" data-filter="backend">Backend</button>
+            <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+        </div>
+    </div>
+</section>
+
+<section class="projects-grid">
+    <div class="container">
+        <div class="projects-container">
+           
+           
+            
+
+            <!-- Project Card 3 - Portfolio Website -->
+            <div class="project-card" data-category="frontend">
+                <div class="project-image">
+                    <img src="{{ url_for('static', filename='project3.jpg') }}" alt="Portfolio Website" onerror="this.style.display='none'">
+                    <div class="project-placeholder">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="project-overlay">
+                       
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Portfolio Website</h3>
+                    <p class="project-description">
+                        A responsive portfolio website showcasing my projects and skills 
+                        with modern design and smooth animations.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">Responsive</span>
+                    </div>
+                   
+                </div>
+            </div>
+
+           
+
+            <!-- Project Card 5 - Blog Platform -->
+            <div class="project-card" data-category="fullstack">
+                <div class="project-image">
+                    <img src="{{ url_for('static', filename='project5.jpg') }}" alt="Blog Platform" onerror="this.style.display='none'">
+                    <div class="project-placeholder">
+                        <i class="fas fa-blog"></i>
+                    </div>
+                    <div class="project-overlay">
+                       
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Blog Platform</h3>
+                    <p class="project-description">
+                        A modern blog platform with content management, user comments, 
+                        SEO optimization, and social media integration.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Bootstrap</span>
+                        <span class="tech-tag">jQuery</span>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Project Card 6 - Weather App -->
+            <div class="project-card" data-category="frontend">
+                <div class="project-image">
+                    <img src="{{ url_for('static', filename='project6.jpg') }}" alt="Weather App" onerror="this.style.display='none'">
+                    <div class="project-placeholder">
+                        <i class="fas fa-cloud-sun"></i>
+                    </div>
+                    <div class="project-overlay">
+                        
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Weather App</h3>
+                    <p class="project-description">
+                        A responsive weather application with location-based forecasts, 
+                        interactive maps, and detailed weather information.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Vue.js</span>
+                        <span class="tech-tag">API Integration</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">PWA</span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="technologies-used">
+    <div class="container">
+        <h2>Technologies I Work With</h2>
+        <div class="tech-grid">
+            <div class="tech-category">
+                <h3>Frontend</h3>
+                <div class="tech-icons">
+                    <div class="tech-icon">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="tech-icon">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="tech-icon">
+                        <i class="fab fa-js-square"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="tech-icon">
+                        <i class="fab fa-react"></i>
+                        <span>React</span>
+                    </div>
+                    <div class="tech-icon">
+                        <i class="fab fa-vue"></i>
+                        <span>Vue.js</span>
+                    </div>
+                </div>
+            </div>
+            <div class="tech-category">
+                <h3>Backend</h3>
+                <div class="tech-icons">
+                    <div class="tech-icon">
+                        <i class="fab fa-python"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="tech-icon">
+                        <i class="fab fa-node-js"></i>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="tech-icon">
+                        <i class="fas fa-database"></i>
+                        <span>PostgreSQL</span>
+                    </div>
+                    <div class="tech-icon">
+                        <i class="fas fa-leaf"></i>
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="tech-icon">
+                        <i class="fas fa-server"></i>
+                        <span>Flask</span>
+                    </div>
+                </div>
+            </div>
+            <div class="tech-category">
+                <h3>Tools & Others</h3>
+                <div class="tech-icons">
+                    <div class="tech-icon">
+                        <i class="fab fa-git-alt"></i>
+                        <span>Git</span>
+                    </div>
+                    <div class="tech-icon">
+                        <i class="fab fa-docker"></i>
+                        <span>Docker</span>
+                    </div>
+                    <div class="tech-icon">
+                        <i class="fab fa-aws"></i>
+                        <span>AWS</span>
+                    </div>
+                    <div class="tech-icon">
+                        <i class="fas fa-cloud"></i>
+                        <span>Cloud Services</span>
+                    </div>
+                    <div class="tech-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Responsive Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="project-cta">
+    <div class="container">
+        <h2>Like What You See?</h2>
+        <p>I'm always working on new projects and learning new technologies. Let's collaborate on something amazing!</p>
+       
+    </div>
+</section>
+
+<script>
+// Project filtering functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
+            
+            const filterValue = button.getAttribute('data-filter');
+            
+            projectCards.forEach(card => {
+                if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                    card.style.display = 'block';
+                    card.style.animation = 'fadeIn 0.5s ease-in-out';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+    
+    // Add CSS for fadeIn animation
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    `;
+    document.head.appendChild(style);
+});
+</script>
+{% endblock %}

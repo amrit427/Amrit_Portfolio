@@ -1,0 +1,376 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1 class="hero-title">
+                Hi, I'm <span class="highlight">Amrit Kumar Patro</span>
+            </h1>
+            <h2 class="hero-subtitle">Full Stack Developer</h2>
+            <p class="hero-description">
+                I create beautiful, responsive web applications using modern technologies. 
+                Passionate about clean code, user experience, and solving complex problems.
+            </p>
+            <div class="availability-status">
+                <div class="status-indicator"></div>
+                <span>Available for freelance projects</span>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="profile-picture">
+                <img src="{{ url_for('static', filename='profile.jpg') }}" alt="Amrit Kumar Patro" onerror="this.style.display='none'">
+                <div class="profile-placeholder">
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Featured Skills Section -->
+<section class="featured-skills">
+    <div class="container">
+        <h2 style="text-align: center; margin-bottom: 40px; color: var(--primary-color);">What I Do</h2>
+        <div class="skills-categories">
+            <div class="skill-category">
+                <div class="skill-icon" style="text-align: center; margin-bottom: 20px;">
+                    <i class="fas fa-laptop-code" style="font-size: 3rem; color: var(--primary-color);"></i>
+                </div>
+                <h3>Frontend Development</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 15px;">
+                    Creating responsive, interactive user interfaces with modern frameworks and libraries.
+                </p>
+                <div class="tech-tags" style="display: flex; flex-wrap: wrap; gap: 8px;">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Vue.js</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">HTML5</span>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <div class="skill-icon" style="text-align: center; margin-bottom: 20px;">
+                    <i class="fas fa-server" style="font-size: 3rem; color: var(--primary-color);"></i>
+                </div>
+                <h3>Backend Development</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 15px;">
+                    Building robust server-side applications with secure APIs and efficient database management.
+                </p>
+                <div class="tech-tags" style="display: flex; flex-wrap: wrap; gap: 8px;">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Flask</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">MongoDB</span>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <div class="skill-icon" style="text-align: center; margin-bottom: 20px;">
+                    <i class="fas fa-mobile-alt" style="font-size: 3rem; color: var(--primary-color);"></i>
+                </div>
+                <h3>Full Stack Solutions</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 15px;">
+                    End-to-end web application development from concept to deployment.
+                </p>
+                <div class="tech-tags" style="display: flex; flex-wrap: wrap; gap: 8px;">
+                    <span class="tech-tag">REST APIs</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">AWS</span>
+                    <span class="tech-tag">Git</span>
+                    <span class="tech-tag">CI/CD</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Projects Section -->
+<section class="featured-projects">
+    <div class="container">
+        <h2 style="text-align: center; margin-bottom: 40px; color: var(--primary-color);">Featured Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="{{ url_for('static', filename='project1.jpg') }}" alt="E-commerce Platform" onerror="this.style.display='none'">
+                    <div class="project-placeholder">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="project-overlay">
+                        
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">E-commerce Platform</h3>
+                    <p class="project-description">
+                        A full-featured e-commerce platform with user authentication, payment integration, and admin dashboard.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">CSS3</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="{{ url_for('static', filename='project2.jpg') }}" alt="Task Management App" onerror="this.style.display='none'">
+                    <div class="project-placeholder">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="project-overlay">
+                       
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Task Management System</h3>
+                    <p class="project-description">
+                        A collaborative task management application with real-time updates and team collaboration features.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Socket.io</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="{{ url_for('static', filename='project3.jpg') }}" alt="Weather Dashboard" onerror="this.style.display='none'">
+                    <div class="project-placeholder">
+                        <i class="fas fa-cloud-sun"></i>
+                    </div>
+                    <div class="project-overlay">
+                       
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Weather Analytics Dashboard</h3>
+                    <p class="project-description">
+                        A comprehensive weather dashboard with data visualization and forecasting capabilities.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">Chart.js</span>
+                        <span class="tech-tag">API Integration</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="{{ url_for('project') }}" class="btn btn-primary">View All Projects</a>
+        </div>
+    </div>
+</section>
+
+<!-- Achievements Section -->
+<section class="achievements">
+    <div class="container">
+        <h2 style="text-align: center; margin-bottom: 40px; color: var(--primary-color);">Achievements & Recognition</h2>
+        <div class="achievements-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            <div class="achievement-card">
+                <div class="achievement-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h3>Best Developer Award</h3>
+                <p style="color: var(--text-secondary);">
+                    Recognized for outstanding performance and innovative solutions in web development.
+                </p>
+            </div>
+            
+            <div class="achievement-card">
+                <div class="achievement-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h3>Full Stack Certification</h3>
+                <p style="color: var(--text-secondary);">
+                    Certified in modern full-stack development technologies and best practices.
+                </p>
+            </div>
+            
+            <div class="achievement-card">
+                <div class="achievement-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Team Leadership</h3>
+                <p style="color: var(--text-secondary);">
+                    Successfully led development teams on multiple high-impact projects.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technologies Section -->
+<section class="technologies-showcase">
+    <div class="container">
+        <h2 style="text-align: center; margin-bottom: 40px; color: var(--primary-color);">Technologies I Work With</h2>
+        <div class="tech-grid">
+            <div class="tech-category">
+                <h3>Frontend</h3>
+                <div class="tech-icons">
+                    <div class="tech-icon">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="tech-icon">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="tech-icon">
+                        <i class="fab fa-js-square"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="tech-icon">
+                        <i class="fab fa-react"></i>
+                        <span>React</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tech-category">
+                <h3>Backend</h3>
+                <div class="tech-icons">
+                    <div class="tech-icon">
+                        <i class="fab fa-python"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="tech-icon">
+                        <i class="fas fa-server"></i>
+                        <span>Flask</span>
+                    </div>
+                    <div class="tech-icon">
+                        <i class="fas fa-database"></i>
+                        <span>PostgreSQL</span>
+                    </div>
+                    <div class="tech-icon">
+                        <i class="fab fa-node-js"></i>
+                        <span>Node.js</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tech-category">
+                <h3>Tools & DevOps</h3>
+                <div class="tech-icons">
+                    <div class="tech-icon">
+                        <i class="fab fa-git-alt"></i>
+                        <span>Git</span>
+                    </div>
+                    <div class="tech-icon">
+                        <i class="fab fa-docker"></i>
+                        <span>Docker</span>
+                    </div>
+                    <div class="tech-icon">
+                        <i class="fab fa-aws"></i>
+                        <span>AWS</span>
+                    </div>
+                    <div class="tech-icon">
+                        <i class="fas fa-cloud"></i>
+                        <span>Cloud Services</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="cta">
+    <div class="container">
+        <h2>Ready to Start Your Project?</h2>
+        <p>I'm always interested in hearing about new opportunities and exciting projects. Let's work together to bring your ideas to life!</p>
+       
+    </div>
+</section>
+
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Add smooth animations for cards on scroll
+document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.project-card, .stat-card, .skill-category, .achievement-card');
+    
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+    
+    cards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(card);
+    });
+    
+    // Animate stats counter
+    const statNumbers = document.querySelectorAll('.stat-number');
+    
+    function animateCounter(element) {
+        const target = parseInt(element.textContent.replace(/[^\d]/g, ''));
+        const suffix = element.textContent.replace(/[\d]/g, '');
+        let current = 0;
+        const increment = target / 50;
+        
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                element.textContent = target + suffix;
+                clearInterval(timer);
+            } else {
+                element.textContent = Math.floor(current) + suffix;
+            }
+        }, 50);
+    }
+    
+    const statsObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                statsObserver.unobserve(entry.target);
+            }
+        });
+    });
+    
+    statNumbers.forEach(stat => {
+        statsObserver.observe(stat);
+    });
+    
+    // Add hover effects for project cards
+    const projectCards = document.querySelectorAll('.project-card');
+    projectCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+});
+</script>
+{% endblock %}
